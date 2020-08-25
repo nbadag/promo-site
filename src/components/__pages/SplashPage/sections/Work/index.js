@@ -33,7 +33,7 @@ class WorkSection extends Component {
               </p>
 
               <div
-                className="work-link"
+                className="work-link animate-with-section"
               >
                 <Link
                   button
@@ -56,7 +56,7 @@ class WorkSection extends Component {
               </p>
 
               <div
-                className="work-link"
+                className="work-link animate-with-section"
               >
                 <Link
                   button
@@ -79,7 +79,7 @@ class WorkSection extends Component {
               </p>
 
               <div
-                className="work-link"
+                className="work-link animate-with-section"
               >
                 <Link
                   button

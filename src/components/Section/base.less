@@ -61,7 +61,8 @@ section {
   h2,
   h3,
   p,
-  ul {
+  ul,
+  .animate-with-section {
     transition: all 0.4s @easing--bounce-soft 0.35s;
   }
 
@@ -70,7 +71,8 @@ section {
     h2,
     h3,
     p,
-    ul {
+    ul,
+    .animate-with-section {
       opacity: 0;
     }
 
@@ -81,13 +83,21 @@ section {
 
     h3,
     p,
-    ul {
+    ul,
+    .animate-with-section {
       transform: translateY(1rem);
-
-      .screen-xs({
-        transform: translateY(2rem);
-      });
     }
+
+    .screen-xs({
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      .animate-with-section {
+        transform: none;
+      }
+    });
   }
 
   &.section--active {
@@ -95,7 +105,8 @@ section {
     h2,
     h3,
     p,
-    ul {
+    ul,
+    .animate-with-section {
       opacity: 1;
       transform: none;
     }

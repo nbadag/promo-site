@@ -38,7 +38,7 @@ class HelloSection extends Component {
           </p>
 
           <div
-            className="hello-links"
+            className="hello-links animate-with-section"
           >
             <Link
               button
