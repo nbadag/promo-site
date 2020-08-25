@@ -1,0 +1,51 @@
+@import 'theme/less/colors';
+@import 'theme/less/animation';
+
+.link {
+  transition: all 0.2s @easing--bounce-soft;
+
+  .link--content {
+    display: inline;
+    padding: 0;
+  }
+
+  &.link--button {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    margin-left: -0.25rem;
+    font-weight: 400;
+    color: @colors--white;
+    background: @colors--secondary;
+    border-radius: 2rem;
+
+    .link--content {
+      padding: 0.5rem 1.25rem;
+    }
+
+    &.link--button--small {
+      font-size: 0.85rem;
+
+      .link--content {
+        padding: 0.25rem 1rem;
+      }
+    }
+
+    .link--button--icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: -0.25rem;
+      padding: 0 0.75rem;
+      border-left: 1px solid fadeout(@colors--white, 60%);
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

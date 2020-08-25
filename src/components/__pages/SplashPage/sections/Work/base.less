@@ -1,0 +1,85 @@
+@import 'theme/less/vendor/screen';
+@import 'theme/less/util';
+@import 'theme/less/colors';
+
+section.SplashPage--section--Work {
+  flex-direction: column;
+  align-items: center;
+
+  .work-links {
+    .screen-lg({
+      .flex-list--horizontal;
+      position: relative;
+      width: 1060px;
+      margin-left: -255px;
+      padding: 2rem 0;
+      background: @colors--white; // @temp
+      z-index: 1;
+
+      li {
+        flex-basis: 33.3333333%;
+        margin: 0 2rem;
+
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+    });
+
+    .screen-md({
+      .flex-list--horizontal;
+      position: relative;
+      width: 960px;
+      margin-left: -201px;
+      padding: 2rem 0;
+      background: @colors--white; // @temp
+
+      li {
+        flex-basis: 33.3333333%;
+        margin: 0 1.5rem;
+
+        p {
+          margin-top: 0.5rem;
+        }
+      }
+    });
+
+    .screen-sm({
+      .flex-list--vertical;
+      position: relative;
+      padding: 0 2.5rem 90px 0;
+
+
+      li {
+        margin: 0.75rem 0;
+
+        p {
+          margin-top: 0.5em;
+          margin-bottom: 0.5rem;
+        }
+      }
+    });
+
+    .screen-xs({
+      .flex-list--vertical;
+      position: relative;
+      padding: 0 2.5rem 90px 0;
+
+
+      li {
+        margin: 1.25rem 0;
+
+        p {
+          margin-top: 0.5em;
+          margin-bottom: 0.5rem;
+        }
+      }
+    });
+
+    .work-link {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+}

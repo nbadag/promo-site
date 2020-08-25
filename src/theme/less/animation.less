@@ -1,0 +1,24 @@
+// Easing
+@easing--bounce-soft: cubic-bezier(0.530, 1.20, 0.655, 0.895);
+@easing--out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+// CSS Transition Group
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 150ms ease-in;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+}

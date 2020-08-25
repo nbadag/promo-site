@@ -1,0 +1,154 @@
+
+@import 'theme/less/vendor/screen';
+@import 'theme/less/colors';
+
+/*
+================================================================================
+Variables
+================================================================================
+*/
+@root--color--base: @colors--type--base;
+@root--font-family--base: neue-haas-unica, sans-serif;
+@root--font-weight--base: 400;
+@root--font-size--base: 1.075rem;
+
+@root--color--header: @colors--dark;
+@root--font-family--header: tenon, sans-serif;
+@root--font-weight--header: 800;
+
+/*
+================================================================================
+Base
+================================================================================
+*/
+.type--base {
+  font-family: @root--font-family--base;
+  font-size: @root--font-size--base;
+  font-weight: @root--font-weight--base;
+  line-height: @root--font-size--base * 1.5;
+  color: @root--color--base;
+
+  .screen-xs({
+    font-size: @root--font-size--base * 0.95;
+    line-height: @root--font-size--base * 0.95 * 1.5;
+  });
+}
+
+/*
+================================================================================
+Headers
+================================================================================
+*/
+.type--header {
+  position: relative;
+  font-family: @root--font-family--header;
+  font-weight: @root--font-weight--header;
+  color: @root--color--header;
+}
+
+.type--header--large {
+  .type--header;
+  margin-bottom: 2rem;
+  font-size: @root--font-size--base * 2.25;
+  line-height: @root--font-size--base * 2.25;
+  letter-spacing: -0.01rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.75rem;
+    width: 7px;
+    background: @colors--highlight;
+    transform: translateX(calc(-50% - 0.5px));
+  }
+
+  .screen-lg({
+    font-size: @root--font-size--base * 4.5;
+    line-height: @root--font-size--base * 4.15;
+
+    &::before {
+      left: -2.6rem;
+    }
+  });
+
+  .screen-md({
+    font-size: @root--font-size--base * 4.5;
+    line-height: @root--font-size--base * 4.15;
+
+    &::before {
+      left: -2.6rem;
+    }
+  });
+
+  .screen-sm({
+    font-size: @root--font-size--base * 4.5;
+    line-height: @root--font-size--base * 4.15;
+
+    &::before {
+      left: -2.95rem;
+    }
+  });
+}
+
+.type--header--medium {
+  .type--header;
+  font-size: @root--font-size--base * 1.75;
+  line-height: @root--font-size--base * 1.75;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.95rem;
+    width: 7px;
+    background: @colors--highlight;
+    transform: translateX(calc(-50% - 0.5px));
+  }
+
+  .screen-lg({
+    font-size: @root--font-size--base * 3;
+    line-height: @root--font-size--base * 3;
+
+    &::before {
+      left: -2.95rem;
+    }
+  });
+
+  .screen-md({
+    font-size: @root--font-size--base * 3;
+    line-height: @root--font-size--base * 3;
+
+    &::before {
+      left: -2.95rem;
+    }
+  });
+
+  .screen-sm({
+    font-size: @root--font-size--base * 3;
+    line-height: @root--font-size--base * 3;
+
+    &::before {
+      left: -2.95rem;
+    }
+  });
+}
+
+.type--header--small {
+  .type--header;
+  font-size: @root--font-size--base * 1.25;
+  line-height: @root--font-size--base * 1.25;
+  margin-bottom: 0;
+
+  .screen-lg({
+    font-size: @root--font-size--base * 1.5;
+    line-height: @root--font-size--base * 1.75;
+  });
+
+  .screen-md({
+    font-size: @root--font-size--base * 1.5;
+    line-height: @root--font-size--base * 1.75;
+  });
+}

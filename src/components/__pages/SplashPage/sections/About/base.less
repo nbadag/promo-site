@@ -1,0 +1,67 @@
+@import 'theme/less/vendor/screen';
+@import 'theme/less/util';
+@import 'theme/less/colors';
+
+section.SplashPage--section--About {
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  .cv {
+    .flex-list--vertical;
+
+    li {
+      position: relative;
+      margin: 0.5rem 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: -2rem;
+        width: 3px;
+        height: 12px;
+        background: @colors--highlight;
+        transform: translateX(calc(-50% + 0.5px));
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: -2rem;
+        width: 3px;
+        height: 12px;
+        background: @colors--highlight;
+        transform: translateX(calc(-50% + 0.5px)) rotate(90deg);
+      }
+
+      .screen-lg({
+        &::before,
+        &::after {
+          top: 5px;
+          height: 16px;
+          left: -3rem;
+        }
+      });
+
+      .screen-md({
+        &::before,
+        &::after {
+          top: 5px;
+          height: 16px;
+          left: -3rem;
+        }
+      });
+
+      .screen-sm({
+        &::before,
+        &::after {
+          top: 5px;
+          height: 16px;
+          left: -3rem;
+        }
+      });
+    }
+  }
+}

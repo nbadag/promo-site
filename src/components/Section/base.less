@@ -1,0 +1,103 @@
+@import 'theme/less/vendor/screen';
+@import 'theme/less/colors';
+@import 'theme/less/animation';
+
+section {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  flex: 0 0 auto;
+  position: relative;
+
+  .section--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+    position: relative;
+    padding: 2.5rem 2.5rem 90px 3rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 1.25rem;
+      width: 1px;
+      background: fadeout(@colors--dark, 80%);
+      z-index: 0;
+    }
+
+    .screen-lg({
+      max-width: 650px;
+
+      &::before {
+        left: 0;
+      }
+    });
+
+    .screen-md({
+      max-width: 650px;
+
+      &::before {
+        left: 0;
+      }
+    });
+
+    .screen-sm({
+      max-width: 650px;
+
+      &::before {
+        left: 0;
+      }
+    });
+
+    .screen-xs({
+      padding: 2.5rem 2.5rem 80px 3.25rem;
+    });
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul {
+    transition: all 0.4s @easing--bounce-soft 0.35s;
+  }
+
+  &.section--inactive {
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      opacity: 0;
+    }
+
+    h1,
+    h2 {
+      transform: translateY(-2rem);
+    }
+
+    h3,
+    p,
+    ul {
+      transform: translateX(1rem);
+
+      .screen-xs({
+        transform: translateY(2rem);
+      });
+    }
+  }
+
+  &.section--active {
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

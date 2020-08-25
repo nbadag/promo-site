@@ -1,0 +1,62 @@
+@import 'theme/less/vendor/normalize';
+@import 'theme/less/type';
+@import 'theme/less/colors';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  .type--base;
+  background: @colors--background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  .type--header--large;
+}
+
+h2 {
+  .type--header--medium;
+}
+
+h3 {
+  .type--header--small;
+}
+
+p {
+  margin: 0.85rem 0;
+  overflow: auto;
+
+  strong {
+    font-weight: 600;
+    color: @colors--dark;
+  }
+}
+
+ul {
+  margin-top: 0;
+  padding-inline-start: 1.2em;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+a,
+a:visited,
+a:active,
+a:focus {
+  font-weight: 600;
+  text-decoration: none;
+  color: @colors--link;
+}

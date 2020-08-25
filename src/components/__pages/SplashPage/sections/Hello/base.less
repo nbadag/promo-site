@@ -1,0 +1,40 @@
+@import 'theme/less/vendor/screen';
+@import 'theme/less/animation';
+
+section.SplashPage--section--Hello {
+  h1 {
+    .screen-lg({
+      margin-left: -0.35rem;
+    });
+
+    .screen-md({
+      margin-left: -0.35rem;
+    });
+
+    .screen-xs({
+      margin-left: -0.2rem;
+    });
+  }
+
+  .link--button {
+    margin-top: 1rem;
+
+    i {
+      font-size: 1.25rem;
+      margin-left: 0.75rem;
+    }
+  }
+
+  .hello-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hello-links--read-cv {
+    margin-left: 1rem;
+
+    .screen-xs({
+      margin-left: 0;
+    });
+  }
+}
