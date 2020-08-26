@@ -19,7 +19,7 @@ class WorkSection extends Component {
           <h2>Work</h2>
 
           <p>
-            Unfortunately, the lion's share of my GitHub contributions (including forks of open source repositories) are behind private organizations for <Link href="https://www.github.com/wribbn">Wribbn</Link> and <Link href="https://www.github.com/terraeclipse">Terra Eclipse</Link>. Below are some other examples of my work that are publicly viewable.
+            The lion's share of my GitHub contributions (including forks of open source repositories) are behind private organizations for <Link href="https://www.github.com/wribbn">Wribbn</Link> and <Link href="https://www.github.com/terraeclipse">Terra Eclipse</Link>. Below are some other examples of my work that are publicly viewable.
           </p>
 
           <ul className="work-links">
